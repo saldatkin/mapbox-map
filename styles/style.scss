@@ -1,28 +1,44 @@
 body {
   margin: 0;
   padding: 0;
+  #map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  .marker {
+    background-size: cover;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .trakaicastle{
+    background-image: url('/assets/trakai.jpg');
+    width: 2rem;
+    height: 2rem;
+  }
+  .gediminastower{
+    background-image: url('/assets/gediminas_tower.png');
+    width: 2rem;
+    height: 2rem;
+  }
+  .tvtower{
+    background-image: url('/assets/tv_tower.jpeg');
+    width: 2rem;
+    height: 2rem;
+  }
+  .republicofužupis{
+    background-image: url('/assets/uzupis.png');
+    width: 2rem;
+    height: 2rem;
+  }
+  .mapboxgl-popup {
+    max-width: 200px;
+  }
+  .mapboxgl-popup-content {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+  }
 }
 
-#map {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-}
-.marker {
-  background-image: url('/assets/mapbox-icon.png');
-  background-size: cover;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
-}
 
-.mapboxgl-popup {
-  max-width: 200px;
-}
-
-.mapboxgl-popup-content {
-  text-align: center;
-  font-family: 'Open Sans', sans-serif;
-}

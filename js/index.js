@@ -60,7 +60,12 @@ const geojson = {
 for (const feature of geojson.features) {
   // create a HTML element for each feature
   const el = document.createElement('div');
-  el.className = 'marker';
+  el.className = 
+  `marker ${feature
+    .properties
+    .description
+    .toLowerCase()
+    .replace(/\s+/g, '')}`;
 
   new mapboxgl.Marker(el)
   .setLngLat(feature.geometry.coordinates)
