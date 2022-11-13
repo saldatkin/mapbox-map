@@ -3,10 +3,11 @@ mapboxgl.accessToken = 'pk.eyJ1Ijoic2FsZGF0a2luIiwiYSI6ImNsOXp5aXZkYzBoczkzbm52O
 /*   creation of new map    */
 const map = new mapboxgl.Map({
   container: 'map',
-  style: 'mapbox://streets',
-  center: [-96, 37.8],
-  zoom: 3
+  style: 'mapbox://styles/mapbox/streets-v11',
+  center: [25.25, 54.7],
+  zoom: 10
 });
+
 
 
 const geojson = {
@@ -16,26 +17,45 @@ const geojson = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [-77.032, 38.913]
+        coordinates: [25.29070, 54.68676]
       },
       properties: {
-        title: 'Mapbox',
-        description: 'Washington, D.C.'
+        description: 'Gediminas Tower'
       }
     },
     {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [-122.414, 37.776]
+        coordinates: [25.21475,54.68717],
       },
       properties: {
-        title: 'Mapbox',
-        description: 'San Francisco, California'
+        description: 'TV Tower'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [25.30070, 54.68176, ]
+      },
+      properties: {
+        description: 'Republic of Užupis'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [24.9331594, 54.6522007,]
+      },
+      properties: {
+        description: 'Trakai Castle'
       }
     }
   ]
 };
+
 
 for (const feature of geojson.features) {
   // create a HTML element for each feature
@@ -47,12 +67,8 @@ for (const feature of geojson.features) {
   .setPopup(
     new mapboxgl.Popup({ offset: 25 }) // add popups
       .setHTML(
-        `<h3>${feature.properties.title}</h3><p>${feature.properties.description}</p>`
+        `<h3>saldatkin</h3><p>${feature.properties.description}</p>`
       )
   )
   .addTo(map);
 }
-
-
-
-  
