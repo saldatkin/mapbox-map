@@ -2,7 +2,7 @@
 <html lang='en'>
 <head>
     <meta charset='utf-8' />
-    <title>Mapbox GL JS</title>
+    <title>Vilnius mapbox gl</title>
     <meta name='viewport' content='width=device-width, initial-scale=1' />
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="shortcut icon" href="/assets/mapbox-icon.png" type="image/x-icon">
@@ -11,12 +11,12 @@
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css' rel='stylesheet' />
 </head>
 <body>
-  <div id='map'>
-  </div>
+  <div id='map'></div>
+  <nav id="filter-group" class="filter-group"></nav>
   <div id="menu">     
-    <input id="streets-v11" type="radio" name="rtoggle" value="streets">
+    <input id="streets-v11" type="radio" name="rtoggle" value="streets" checked="checked">
     <label for="streets-v11">streets</label>
-    <input id="satellite-v9" type="radio" name="rtoggle" value="satellite" checked="checked">
+    <input id="satellite-v9" type="radio" name="rtoggle" value="satellite">
     <label for="satellite-v9">satellite</label>
     <input id="light-v10" type="radio" name="rtoggle" value="light">
     <label for="light-v10">light</label>
@@ -26,5 +26,6 @@
     <label for="outdoors-v11">outdoors</label>
   </div>
   <script src="/js/index.js"></script>
+  <!--<script src="/js/checkboxes.js"></script>-->
 </body>
 </html>
